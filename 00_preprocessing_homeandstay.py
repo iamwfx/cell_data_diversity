@@ -25,15 +25,16 @@ import sys
 from glob import glob
 
 ##Bring in city boundaries and road buffer boundaries. 
-city = gpd.read_file('00_Data/Other/Chicago_boundaries/geo_export_f05488dc-4f9d-49be-81e3-c094992d4c80.shp')
+city = gpd.read_file('Other/Chicago_boundaries/geo_export_f05488dc-4f9d-49be-81e3-c094992d4c80.shp')
 ## Tiger roads dissolved wth a 30ft buffer.
-roads = gpd.read_file('00_Data/Other/buffers_30ft_rad_dissolve/buffers_30ft_rad_dissolve.shp')
+roads = gpd.read_file('Other/buffers_30ft_rad_dissolve/buffers_30ft_rad_dissolve.shp')
 
 ########################
 ### 0. Data Cleaning ###
 ########################
 
 ## 0.1 Import data
+### Chang
 f = glob('00_Data/US/201910*')
 f.sort()
 print(f)
@@ -201,7 +202,7 @@ for i in range(0,600):
 
 	# Lose about 7k of home locations per day if we use this
 
-	landuse=gpd.read_file('00_Data/Other/Zoning/geo_export_c898f6f6-ca6f-4ffc-8f39-ef1bdedf83a0.shp')
+	landuse=gpd.read_file('Other/Zoning/geo_export_c898f6f6-ca6f-4ffc-8f39-ef1bdedf83a0.shp')
 	landuse = landuse[landuse['zone_type'].isin([4,5,7,8,9,10])]
 	landuse= landuse[landuse.geometry.type.isin(['MultiPolygon', 'Polygon'])]
 	home_final = gpd.sjoin(home6,landuse,how='inner',op='intersects')

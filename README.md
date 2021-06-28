@@ -4,17 +4,26 @@ This repo contains the code for the paper "The contingency of neighborhood diver
 Author: [Wenfei Xu](wenfeixu.com)
 
 ### Organization
-``00_preprocessing_homeandstay.py`` 
+- ``00_preprocessing_homeandstay.py`` 
 This script contains the code to create home and stay locations from the original mobile phone application data. It assumes the raw data files are organized by day and can run on a single server. 
 
-``01_Radius_Velocity_Visitors_Tests.ipynb`` 
+- ``01_Radius_Velocity_Visitors_Tests.ipynb`` 
 This notebook tests the sensitivity and validity of the radii thresholds used in the paper to create clusters.
-
-``02_Evaluate_Population_Tracts_Blkgrp`` 
+- ``02_Evaluate_Population_Tracts_Blkgrp`` 
 This notebook is used to model the census population from the mobile phone data. 
-
-``03_Diversity_Analysis`` 
+- ``03_Diversity_Analysis`` 
 This notebook contains the diversity analysis after the modeled population has been created. 
+
+### Data
+I've included the other datasets that were used in the paper (aside from the mobile phone data): 
+
+- ``buffers_30ft_rad_dissolve`` contains the major street data with a 30ft radius buffer 
+- ``Chicago_boundaries`` contains the Chicago municipal boundaries
+- ``Zoning`` is the city's current zoning data
+
+
+### Requirements
+These notebooks can be run using the [Geographic Data Science environment](https://github.com/darribas/gds_env)!
 
 ### Citation
 If you would like to use the data and/or code from this repo, please use the following citation:

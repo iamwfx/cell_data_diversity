@@ -1,5 +1,5 @@
 ## The contingency of neighbourhood diversity
-This repo contains the code for the paper "The contingency of neighborhood diversity: variation of social context using mobile phone application data".
+This repo contains the code for the paper "[The contingency of neighborhood diversity: variation of social context using mobile phone application data](https://journals.sagepub.com/doi/10.1177/00420980211019637)".
 
 Author: [Wenfei Xu](wenfeixu.com)
 
